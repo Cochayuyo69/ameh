@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <title>¿Quieres ser mi novia<3?</title>
+    <style>
+        .body{
+            background-color: #e5b3fe;
+            text-align: center;
+            height: 100vh; /* Hace que el contenedor principal ocupe toda la altura de la ventana */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .body__title{
+            color: whitesmoke;
+        }
+    
+        .body__img{
+            max-width: 80%; /* Establece el ancho máximo de la imagen */
+            border-radius: 50%;
+            margin-bottom: 20px; /* Espacio entre la imagen y los botones */
+        }
+    
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .button-container button {
+            margin: 0 10px; /* Espacio entre los botones */
+            font-family: "Space Grotesk", sans-serif; /* Aplica la misma fuente que el título */
+            font-weight: 400; /* Puedes cambiar esto según el peso de la fuente que desees */
+            background-color: black;
+            cursor: pointer;
+            border: none;
+            padding: 16px 32px;
+            color: #FFF;
+            font-size: 14px;
+            font-weight: bold;
+            position: relative;
+            border-radius: 12px;
+        }
+
+        /* Aquí agregamos el bloque de código Space Grotesk */
+        .space-grotesk-custom {
+            font-family: "Space Grotesk", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400; /* Cambia esto según el peso de la fuente que desees */
+            font-style: normal;
+        }
+
+    </style>
+    
+    
+    
+</head>
+<body class="body">
+    <div class="content">
+        <h1 class="body__title space-grotesk-custom">¿Quieres ser mi novia <3?</h1>
+        <img src="https://pbs.twimg.com/media/EaeaD7aWoAAWNuu.jpg" alt="Jimin corazon" class="body__img"/>
+        <div class="button-container space-grotesk-custom">
+            <button id="yes" tabindex="-1">Siiiii</button>
+            <button id="no" tabindex="-1">Claro que no idiota</button>
+        </div>
+    </div>
+
+    <script>
+        const vutomSi = document.getElementById("yes");
+        const vutomNo = document.getElementById("no");
+
+        const somosnobios = () => {
+            alert('Ahora somos novios 💕');
+            alert('Ahora dame todas tus cuentas 👹');
+            location.href = 'https://www.youtube.com/watch?v=B_m40dds7Ls';
+        }
+
+        const evitarNo = () => {
+            vutomNo.style.position = 'absolute';
+            vutomNo.style.top = (Math.random() * window.innerHeight) + 'px';
+            vutomNo.style.left = (Math.random() * window.innerWidth) + 'px';
+        }
+
+        vutomSi.addEventListener('click', somosnobios);
+
+        vutomNo.addEventListener('mouseover', evitarNo);
+    </script>
+</body>
+
+</html>
